@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <title>ラノベっぽいタイトルにするやつ</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="kuromoji/kuromoji.js"></script>
+    <script src="index.js"></script>
+    <div id="app" class="app-area ui center aligned grid">
+        <div class="ui input column eight wide">
+            <pre>{{ ctx.msg }}</pre>
+            <input class="inputbox" type="text" v-model="ctx.text">
+            <input class="ui button blue" type="button" value="ラノベっぽいタイトルにする" @click="toLightNovelTitle">
+        </div>
+    </div>
+</body>
+
+</html>
